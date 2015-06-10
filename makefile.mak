@@ -33,6 +33,8 @@ preambulo:
 	@echo Compilando programa...
 	@echo ------------------------------------------------------------
 	@echo
+	
+	mkdir {bin,doc,lib,obj}
 #................................................
 
 ejecutables:
