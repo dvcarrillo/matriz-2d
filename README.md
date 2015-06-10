@@ -8,3 +8,6 @@ The zip includes:
  - A file with the declarations of the class and methods
  - A file with the implementation of those methods
  - A file with the main program, which have to be used to test if the methods work
+
+Some example binary files with matrices to use with this program can be downloaded from here:
+https://mega.nz/#!bFtiXZQA!iCiYnICICKAZT6p8yUxgCwZbRJaMblM7GowZtncZogs
