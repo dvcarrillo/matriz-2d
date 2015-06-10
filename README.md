@@ -8,4 +8,3 @@ The zip includes:
  - A file with the declarations of the class and methods
  - A file with the implementation of those methods
  - A file with the main program, which have to be used to test if the methods work
- - Some binary files with example matrices
