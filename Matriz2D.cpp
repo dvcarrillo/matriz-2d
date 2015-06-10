@@ -17,13 +17,13 @@
 
 using namespace std;
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Constructor sin argumentos
 // Crea una matriz vacía
 
 Matriz2D :: Matriz2D (void) : filas(0), columnas(0), datos(0) {}
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Constructor con un argumento
 // Crea una matriz cuadrada "n x n"
 
@@ -32,7 +32,7 @@ Matriz2D :: Matriz2D (int n) : filas (n), columnas(n)
 	ReservarMemoria (filas, columnas);
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Constructor con dos argumentos
 // Crea una matriz rectangular "f x c"
 
@@ -41,7 +41,7 @@ Matriz2D :: Matriz2D (int f, int c) : filas (f), columnas(c)
 	ReservarMemoria (filas, columnas);
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Constructor de copia
 // Recibe un objeto de Matriz2D y lo copia a la matriz actual
 
@@ -54,7 +54,7 @@ Matriz2D :: Matriz2D (const Matriz2D & otro)
 	CopiarDatos (otro);
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Destructor
 // Libera la memoria ocupada por la matriz
 
@@ -63,7 +63,7 @@ Matriz2D :: ~Matriz2D (void)
 	LiberarMemoria();
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Lee datos de un fichero binario y los guarda en la matriz
 //
 // ¡IMPORTANTE! FORMATO DEL FICHERO BINARIO:
@@ -114,7 +114,7 @@ void Matriz2D :: LeeFichero (const char * nombre_fichero)
 	fi.close();
 }
 
-/**************************************************************+***************/
+/*****************************************************************************/
 // Escribe los datos de la matriz en un fichero binario
 //
 // ¡IMPORTANTE! FORMATO DEL FICHERO BINARIO:
@@ -159,7 +159,7 @@ void Matriz2D :: EscribeFichero (const char * nombre_fichero)
 	fo.close();
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Rellena todas las casillas de la matriz con el valor indicado
 void Matriz2D :: Inicializar (const TipoBase num)
 {
@@ -168,28 +168,28 @@ void Matriz2D :: Inicializar (const TipoBase num)
 			(*this) (fil,col) = num;
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Consulta si la matriz está vacía
 bool Matriz2D :: EstaVacia (void) const
 {
 	return (datos == 0);
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Consulta el número de filas de la matriz
 int Matriz2D :: Filas (void) const
 {
 	return(filas);
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Consulta el número de columnas de la matriz
 int Matriz2D :: Columnas (void) const
 {
 	return(columnas);
 }
 
-/**************************************************************+**********/
+/*****************************************************************************/
 // Métodos de acceso individual a los elementos de la matriz: operador ()
 // Métodos de lectura/escritura
 // PRE: 0 <= posicion < usados
@@ -203,7 +203,7 @@ TipoBase & Matriz2D :: operator () (const int fila, const int columna) const
 	return(datos[fila][columna]);
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Operador de asignación
 // Recibe otra matriz, por lo que la copiará en la actual
 Matriz2D & Matriz2D :: operator = (const Matriz2D & otro)
@@ -223,7 +223,7 @@ Matriz2D & Matriz2D :: operator = (const Matriz2D & otro)
 	return (*this);
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Operador de asignación
 // Recibe un número de tipo TipoBase, por lo que inicializa toda la matriz
 // a el valor indicado
@@ -235,7 +235,7 @@ Matriz2D & Matriz2D :: operator = (const TipoBase & valor)
 	return (*this);
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Operador ==
 // Comprueba si dos matrices son iguales
 bool Matriz2D :: operator == (const Matriz2D otro)
@@ -260,7 +260,7 @@ bool Matriz2D :: operator == (const Matriz2D otro)
 	return (iguales);
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Operador !=
 // Comprueba si dos matrices son diferentes
 bool Matriz2D :: operator != (const Matriz2D otro)
@@ -268,7 +268,7 @@ bool Matriz2D :: operator != (const Matriz2D otro)
 	return !((*this) == otro);
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Función que reserva memoria en el heap para la matriz
 void Matriz2D :: ReservarMemoria (int filas, int columnas)
 {
@@ -280,7 +280,7 @@ void Matriz2D :: ReservarMemoria (int filas, int columnas)
 		datos[i] = new TipoBase [columnas];
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Función que libera la memoria ocupada por la matriz
 void Matriz2D :: LiberarMemoria (void)
 {
@@ -301,7 +301,7 @@ void Matriz2D :: LiberarMemoria (void)
 	}
 }
 
-/**************************************************************+**************/
+/*****************************************************************************/
 // Copia los datos de otro objeto al objeto actual
 void Matriz2D :: CopiarDatos (const Matriz2D & otro)
 {
